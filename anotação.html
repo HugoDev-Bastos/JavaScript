@@ -1,0 +1,276 @@
+<script>
+    // Formatos de String
+
+    window.alert('Minha Primeira Mensagem') //alertas de mensagem
+    window.confirm('Está Gostando do JS?') //janela com butão Ok, Cancelar
+    window.prompt('Qual é seu nome?') //Interação com Usuário
+
+    var s = 'JavaScript' // guarda valor de uma variavel
+    window.document.write(s) // mostra o valor da variavel 's'
+
+    Number.parseInt // ( Numeros inteiros)
+    Number.ParseFloat // (Não Inteiro)
+    Number // (Reconhece os dois tipos)
+
+
+    5 + 5 // (number + number) para adição
+        ('5' + '5') // (string + string) para concatenação
+        ($ { // mostrar variavel }) // TemplateString
+
+                s.length //quantos caracteres a string tem
+                s.ToUpperCase() //tudo para MAIÚSCULAS
+                s.ToLowerCase() //tudo para minúsculas
+
+
+                // FORMATADORE DE NUMEROS
+
+                var n = 123.4
+
+                n.toFixed(2) // para adicionar casa decimais
+                n.toFixed(2).replace('.', ',') // mudar de uma 'string' para outra ' string'
+                n.toLocaleString('pt-BR', {
+                    style: 'currency',
+                    currency: 'BRL'
+                })
+
+
+                //OPERADORES
+
+                ARITMETICOS
+                /*
+                    + (soma) 
+                    - (subtração) 
+                    * (multiplicação) 
+                    / (divisão) 
+                    % (divisão inteira) 
+                    ** (potencia)
+
+                     ordem de precedencia
+
+                    ()
+                    **
+                    * / %
+                    + -
+
+                    ATRIBUIÇÃO [Simples]
+                    var a = b 5 + 5
+
+                    AUTO ATRIBUIÇÃO
+
+                    var n = 5
+                    n = n + 5 [n+=5]
+                    n = n - 5 [n-=5]
+                    n = n * 5 [n*=5]
+                    n = n / 5 [n/=5]
+                    n = n ** 5 [n**=5]
+                    n = n % 5 [n%=5]
+
+                    INCREMENTOS
+
+                    var x = 5
+                    x= x + 1 [x++]
+                    x= x - 1 [x--n-]
+                */
+
+                RELACIONAIS
+                /*
+                    > [maior] 
+                    < [menor]
+                    =
+                    >= [maior igual]
+                    <=[menor igual]
+                    == [igual]
+                    != [diferente]
+
+                    //Atividade
+
+                    5 > 2 =  true
+                    7 < 4 = false
+                    8 >= 8 = true
+                    9 <= 7 = false
+                    5 == 5 = true
+                    4 != 4 = false
+
+                    //Identidade
+
+                    5 == 5 true
+                    5 == '5' true
+                    5 === '5' false [ não identico (number) (string)]
+                    5 === 5 true [identico (number) (number)]
+                */
+                LÓGICOS
+                /*
+
+                    ! [Negação]
+
+                        ! true => false
+                        ! false => true
+
+                    && [Conjução] (verdadeiro)(verdadeiro) ( E )
+
+                        true && true => true
+                        true && false => false
+                        false && true => false
+                        false && false => false
+
+                    || [Disjunção] ( OU )
+
+                        true || true => true
+                        true || false => true
+                        false || true => true
+                        false || false => false
+
+                    atividade
+
+                    idade >= 15 && idade <= 17 // a idade está entre 15 e 17?
+                    estado == 'RJ' || estado == 'SP' // o estado é RJ ou SP?
+                    salario > 1500 && sexo != 'M' //o salario é acima de 1500 e não e homem?
+
+                */
+                TERNÁRIOS
+                /*
+                    TESTE ? 'TRUE' : 'FALSE'
+
+                    atividade 01
+                    
+                    var idade = 20
+                    var resposta = idade >= 18?'SIM':'NÃO'
+                    
+                    atividade 02
+
+                    var média = 5.5
+                    var resposta = média>= 7.0 ? "aprovado" : "reprovado"
+                        
+                */
+                PRECEDÊNCIA
+                /*
+                    () ** / [aritmeticos]
+                    > < >= [relacionais]
+                    ! && || [logicos]
+                    ? :   [ternários]
+                */
+
+
+                DOM - Document Object Model
+
+                /*
+
+                    // Estrutura de um documento 
+                    window
+                    -location
+                    -document
+                        html
+                            head 
+                                meta /tile
+                            
+                            body
+                                tags
+                    -history
+
+
+                    //Por marca 
+                     getElementsByName() // Mais de um elemento
+
+                     var p1 = window.document.getElementsByTagName('p')[1] // [] mudar o paragrafo
+                        window.document.write(p1.innerHTML)
+                        p1.style.color = 'yellow'
+                        p1.style.background = 'black'
+
+                    //por ID
+                     getElementsById()
+
+                     var r = window.document.getElementById('msg')
+                        window.document.write(r.innerText)
+                        r.style.background = 'black'
+                        r.innerText = "Olá Mundo!" //
+
+                    //por Nome
+                     getElementsByName()
+
+                    //por Classe
+                    getElementsByClassName()
+
+                    // Por seletor // por elemtos do css
+                    querySelector()
+                    querySelectorAll()
+
+                    var d = window.document.querySelector('div#msg') // id = [.] class= [#]
+                    d.style.background = 'black'
+
+                        Eventos DOM
+
+                        funções
+
+                        function ação(parametro) {
+
+                        }
+                */
+
+                CONDIÇÕES
+                /*
+                 
+                    DESVIO DE CONDIÇÕES
+
+                    if (condição){
+                        [True]
+                    }else{
+                        [False]
+                    }
+
+                    TIPOS DE CONDIÇÕES
+
+                    ==> CONDIÇÃO SIMPLES
+
+                    if (condição){
+                        [True]
+                    }
+
+                    ==> CONDIÇÃO COMPOSTA
+
+                    if (condição){
+                        [True]
+                    }else{
+                        [False]
+                    }
+                         
+                    ==> CONDIÇÃO ANINHADAS
+
+                    if(codição){
+                        [true] 
+                    }else{
+                        if(condição 2){
+                            [true]
+                        }else{
+                            [false]
+                        }
+                    }
+                 
+                    ==> CONDIÇÃO MULTIPLA
+
+                    switch (expreessão){
+                        case valor 1:
+                        
+                            break // precisa dos 'break'
+
+                        case valor 2:
+
+                            break
+
+                        case valor 3:
+
+                            break
+
+                        case valor 4:
+
+                            break
+                    }
+
+                */
+
+                REPETIÇÕES
+                /*
+s
+
+
+                */
+</script>

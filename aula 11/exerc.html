@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Mudando de País</h1>
+    <p>Seu país: <input type="text" name="pais1" id="pais1"></p>
+    <p>Para qual país : <input type="text" name="pais2" id="pais2">
+        <input type="button" value="Verificar" onclick="verificar()"></p>
+
+    <div id="res"></div>
+
+    <script>
+        function verificar() {
+            var p1 = window.document.querySelector('input#pais1')
+            var p2 = window.document.querySelector('input#pais2')
+            var r1 = (p1.value)
+            var r2 = (p2.value)
+
+            if (r1 == r2) {
+                res.innerHTML = 'Você já é desse País!'
+            } else {
+                res.innerHTML = ' Você não é estrangeiro nesse País!'
+            }
+        }
+    </script>
+
+</body>
+
+</html>
